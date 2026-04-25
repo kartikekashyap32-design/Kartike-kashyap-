@@ -1,0 +1,276 @@
+:root {
+  --bg: #070914;
+  --bg-soft: #101730;
+  --text: #f5f7ff;
+  --muted: #b7c0e6;
+  --accent: #7c8bff;
+  --accent-2: #00d9ff;
+  --glass: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 20% 20%, #182148, var(--bg));
+  color: var(--text);
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+#bg-particles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.35;
+  animation: float 12s ease-in-out infinite;
+}
+
+body::before {
+  background: var(--accent);
+  top: -120px;
+  left: -100px;
+}
+
+body::after {
+  background: var(--accent-2);
+  bottom: -120px;
+  right: -80px;
+  animation-delay: -6s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(30px) translateX(20px);
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 8vw;
+  backdrop-filter: blur(10px);
+  background: rgba(7, 9, 20, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 8vw 6rem;
+}
+
+section {
+  margin: 2.5rem 0;
+}
+
+.hero {
+  min-height: 70vh;
+  display: grid;
+  align-content: center;
+  gap: 0.7rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-2);
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 7vw, 4.2rem);
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: var(--muted);
+  min-height: 2.4rem;
+}
+
+.cursor {
+  color: var(--accent-2);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-copy {
+  max-width: 640px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 0.8rem 1.3rem;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid transparent;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  box-shadow: 0 6px 25px rgba(59, 120, 255, 0.4);
+}
+
+.btn-ghost {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.3rem;
+  backdrop-filter: blur(12px);
+}
+
+h3 {
+  font-size: 1.45rem;
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  padding: 1.2rem;
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.24s ease, border-color 0.24s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-2);
+}
+
+.project-card h4 {
+  margin-top: 0;
+}
+
+.project-card span {
+  color: #93a0d9;
+  font-size: 0.9rem;
+}
+
+.chip-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.chip-wrap span {
+  background: rgba(124, 139, 255, 0.2);
+  border: 1px solid rgba(124, 139, 255, 0.4);
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 8vw 2.6rem;
+  color: #8f9bd1;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 1rem 5vw;
+  }
+
+  nav {
+    gap: 0.7rem;
+    font-size: 0.92rem;
+  }
+
+  main {
+    padding: 2rem 5vw 4rem;
+  }
+}
