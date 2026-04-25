@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kartike Kashyap | Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio website for Kartike Kashyap, a full stack developer focused on polished user experiences and scalable web applications."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="bg-particles" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <div class="logo">KK.</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero reveal">
+        <p class="eyebrow">Hello, I am</p>
+        <h1>Kartike Kashyap</h1>
+        <h2><span id="typing-text"></span><span class="cursor">|</span></h2>
+        <p class="hero-copy">
+          I build high-performance full stack web experiences with modern UI/UX,
+          smooth animations, and maintainable architecture.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Work</a>
+          <a href="mailto:kartikekashyap32@gmali.com" class="btn btn-ghost">Hire Me</a>
+        </div>
+      </section>
+
+      <section id="about" class="glass reveal">
+        <h3>About Me</h3>
+        <p>
+          I am a full stack developer passionate about transforming ideas into
+          impactful products. My focus is blending clean engineering with
+          delightful design, from API architecture to animated front-end
+          interactions.
+        </p>
+      </section>
+
+      <section id="projects" class="reveal">
+        <h3>Featured Projects</h3>
+        <div class="project-grid">
+          <article class="project-card">
+            <h4>Realtime Commerce Dashboard</h4>
+            <p>
+              Built a role-based analytics dashboard with live sales insights,
+              chart visualizations, and secure authentication flows.
+            </p>
+            <span>React • Node.js • PostgreSQL</span>
+          </article>
+          <article class="project-card">
+            <h4>Smart Booking Platform</h4>
+            <p>
+              Engineered an end-to-end booking system with payment integration,
+              admin controls, and automated notification pipelines.
+            </p>
+            <span>Next.js • Express • MongoDB</span>
+          </article>
+          <article class="project-card">
+            <h4>Portfolio CMS</h4>
+            <p>
+              Designed a custom content management workflow for creators to
+              publish projects with image optimization and SEO support.
+            </p>
+            <span>TypeScript • Prisma • MySQL</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="reveal">
+        <h3>Skills</h3>
+        <div class="chip-wrap">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          <span>TypeScript</span><span>React</span><span>Next.js</span>
+          <span>Node.js</span><span>Express</span><span>MongoDB</span>
+          <span>PostgreSQL</span><span>REST APIs</span><span>UI/UX Design</span>
+        </div>
+      </section>
+
+      <section id="contact" class="glass reveal">
+        <h3>Let's Build Something Great</h3>
+        <p>
+          Open for freelance, full-time opportunities, and collaboration.
+          Reach out and let's create a digital experience users love.
+        </p>
+        <a href="mailto:kartikekashyap32@gmali.com" class="btn btn-primary">
+          kartikekashyap32@gmali.com
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Kartike Kashyap — Full Stack Developer</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
